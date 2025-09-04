@@ -10,25 +10,61 @@
     <TextView
         android:id="@+id/flashcard_question"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/card_background"
+        android:elevation="5dp"
         android:text="@string/Question"
         android:textAlignment="center"
-        android:textSize="40sp"
-        android:layout_marginTop="100dp"
+        android:textColor="@color/white"
+        android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/flashcard_answer"
-        android:layout_below="@id/flashcard_question"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/flashcard_question"
+        android:layout_marginTop="52dp"
+        android:background="@color/light_red"
         android:text="Port-au-Prince"
-        android:visibility="invisible"
         android:textAlignment="center"
-        android:textSize="40sp"
+        android:textSize="30sp" />
 
-        />
+    <TextView
+        android:id="@+id/flashcard_extra1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/flashcard_answer"
+        android:layout_marginTop="29dp"
+        android:background="@color/light_red"
+        android:text="Mirbalais"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/flashcard_extra2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/flashcard_extra1"
+        android:layout_marginTop="30dp"
+        android:background="@color/light_red"
+        android:text="Jacmel"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/flashcard_extra3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/flashcard_extra2"
+        android:layout_marginTop="29dp"
+        android:background="@color/light_red"
+        android:text="Cap-Haitien"
+        android:textAlignment="center"
+        android:textSize="30sp" />
 
 </RelativeLayout>

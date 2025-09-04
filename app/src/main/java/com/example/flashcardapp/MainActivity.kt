@@ -1,24 +1,53 @@
 package com.example.flashcardapp
 
 import android.os.Bundle
-import android.view.View
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        val flashcardQuestion = findViewById<TextView>(R.id.flashcard_question)
+        findViewById<TextView>(R.id.flashcard_question)
         val flashcardAnswer = findViewById<TextView>( R.id.flashcard_answer)
-        flashcardQuestion.setOnClickListener{
-            flashcardQuestion.visibility = View.INVISIBLE
-            flashcardAnswer.visibility = View.VISIBLE
+        val extra1 = findViewById<TextView>(R.id.flashcard_extra1)
+        val extra2 = findViewById<TextView>(R.id.flashcard_extra2)
+        val extra3 = findViewById<TextView>(R.id.flashcard_extra3)
+
+        // Fonksyon pou reinitialiser koulè yo
+        fun resetColors() {
+            flashcardAnswer.setBackgroundColor(ContextCompat.getColor(this, R.color.my_transparent))
+            extra1.setBackgroundColor(ContextCompat.getColor(this, R.color.my_transparent))
+            extra2.setBackgroundColor(ContextCompat.getColor(this, R.color.my_transparent))
+            extra3.setBackgroundColor(ContextCompat.getColor(this, R.color.my_transparent))
         }
+
+        flashcardAnswer.setOnClickListener {
+            resetColors()
+            flashcardAnswer.setBackgroundColor(ContextCompat.getColor(this, R.color.my_green_color))
+        }
+
+        extra1.setOnClickListener {
+            resetColors()
+            extra1.setBackgroundColor(ContextCompat.getColor(this, R.color.my_red_color))
+        }
+
+        extra2.setOnClickListener {
+            resetColors()
+            extra2.setBackgroundColor(ContextCompat.getColor(this, R.color.my_red_color))
+        }
+
+        extra3.setOnClickListener {
+            resetColors()
+            extra3.setBackgroundColor(ContextCompat.getColor(this, R.color.my_red_color))
+        }
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
