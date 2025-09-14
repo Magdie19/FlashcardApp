@@ -1,9 +1,6 @@
 package com.example.flashcardapp
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.ImageButton
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -22,15 +19,7 @@ class MainActivity : AppCompatActivity() {
         val extra1 = findViewById<TextView>(R.id.flashcard_extra1)
         val extra2 = findViewById<TextView>(R.id.flashcard_extra2)
         val extra3 = findViewById<TextView>(R.id.flashcard_extra3)
-        val add_btn = findViewById<ImageView>(R.id.add_btn)
-        add_btn.setOnClickListener{
-            fun launchComposeView() {
-                // first parameter is the context, second is the class of the activity to launch
-                val i = Intent(this, AddQuestion::class.java)
-                startActivity(i) // brings up the second activity
-            }
-            launchComposeView()
-        }
+
         // Fonksyon pou reinitialiser koulè yo
         fun resetColors() {
             flashcardAnswer.setBackgroundColor(ContextCompat.getColor(this, R.color.my_transparent))
@@ -64,9 +53,7 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-
-
     }
+
 
 }
