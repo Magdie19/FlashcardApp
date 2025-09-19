@@ -56,6 +56,14 @@
         android:textAlignment="center"
         android:textSize="30sp" />
 
+    <ImageView
+        android:id="@+id/myBtn"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        app:srcCompat="@drawable/plus_circle"/>
+
     <TextView
         android:id="@+id/flashcard_extra3"
         android:layout_width="match_parent"
