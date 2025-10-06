@@ -1,16 +1,21 @@
 #FlashcardApp
 
 #Description
-Cette Application permet aux utilisateurs de tester leurs connaissances
-- La bonne reponse devient vert
-- Une mauvaise reponse devient rouge
+FlashcardApp is an Android application that allows users to test their knowledge through interactive question and answer cards.  
+The application makes learning fun and visual thanks to a color system that indicates correct and incorrect answers.
+- Correct answers turn green
+- Incorrect answers turn red
 
-#Fonctionalites
-- Afficher la question
-- Trois reponse supplementaires affiches sous la question
-- Couleur de fond Vert pour la bonne reponse lorsqu'on clique dessus
-- Couleur de fond Rouge pour une mauvaise reponse lorsqu'on clique dessus
+#Features
+- Display the question
+- Three additional answers displayed below the question
+- Green background color for correct answers when clicked
+- Red background color for incorrect answers when clicked
+- Clicking on the “+” button redirects the user to a new page
+- On this page, they can add a new question and its answers
+- Clicking on the “×” button returns the user to the home screen
 
-  #Gif
+#Gif
   
-  Le gif montre le comportement de chaque reponse lorsqu'on clique sur elles.
+  The gif shows how each answer behaves when clicked on.
+
